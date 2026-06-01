@@ -1,189 +1,239 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Support - FairyTales</title>
-  <meta name="description" content="Support page for the FairyTales app.">
-  <style>
-    :root {
-      color-scheme: light dark;
-      --app-bg: #f2f2f7;
-      --card: #ffffff;
-      --text: #1c1c1e;
-      --muted: #6b7280;
-      --primary: #7c3aed;
-      --secondary: #ec4899;
-      --warm: #f59e0b;
-      --border: rgba(124, 58, 237, .14);
-      --shadow: rgba(31, 41, 55, .08);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --app-bg: #111113;
-        --card: #1c1c1e;
-        --text: #f9fafb;
-        --muted: #d1d5db;
-        --border: rgba(236, 72, 153, .18);
-        --shadow: rgba(0, 0, 0, .28);
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 14% 0%, rgba(124, 58, 237, .17), transparent 30%),
-        radial-gradient(circle at 86% 12%, rgba(236, 72, 153, .13), transparent 26%),
-        var(--app-bg);
-    }
-    main {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 40px 20px 56px;
-    }
-    .hero, .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      box-shadow: 0 12px 30px var(--shadow);
-    }
-    .hero {
-      padding: 26px;
-      margin-bottom: 18px;
-      overflow: hidden;
-      position: relative;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -58px;
-      top: -58px;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(124,58,237,.16), rgba(236,72,153,.12));
-    }
-    .brand-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      position: relative;
-      z-index: 1;
-    }
-    .app-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      font-size: 32px;
-      background: linear-gradient(135deg, rgba(124,58,237,.16), rgba(236,72,153,.12));
-    }
-    h1 {
-      margin: 0;
-      font-size: 34px;
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-    }
-    .subtitle {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-      font-weight: 600;
-    }
-    .intro {
-      margin: 18px 0 0;
-      max-width: 720px;
-      color: var(--muted);
-      position: relative;
-      z-index: 1;
-    }
-    .card {
-      padding: 22px;
-      margin: 14px 0;
-    }
-    h2 {
-      margin: 0 0 10px;
-      font-size: 19px;
-      line-height: 1.25;
-    }
-    p, li { color: var(--text); }
-    .muted { color: var(--muted); }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(124, 58, 237, .10);
-      color: var(--primary);
-      font-weight: 800;
-      font-size: 13px;
-      margin-bottom: 14px;
-    }
-    .badge.warm {
-      background: rgba(245, 158, 11, .14);
-      color: var(--warm);
-    }
-    a {
-      color: var(--primary);
-      font-weight: 800;
-      text-decoration: none;
-    }
-    a:hover { text-decoration: underline; }
-    .button-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 18px;
-      border-radius: 16px;
-      color: #fff;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      box-shadow: 0 10px 24px rgba(124,58,237,.20);
-    }
-    .button:hover { text-decoration: none; filter: brightness(1.02); }
-    footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support - Fairytales App</title>
+    <style>
+:root {
+    --bg1: #f7f2ff;
+    --bg2: #fff2f8;
+    --bg3: #fff7e8;
+    --card: rgba(255, 255, 255, 0.88);
+    --text: #2d2140;
+    --muted: #6e5f80;
+    --purple: #7c3aed;
+    --pink: #ec4899;
+    --gold: #f59e0b;
+    --green: #6aa77a;
+    --border: rgba(124, 58, 237, 0.16);
+    --shadow: 0 22px 55px rgba(84, 49, 125, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 20% 10%, rgba(236, 72, 153, 0.20), transparent 30%),
+        radial-gradient(circle at 85% 5%, rgba(245, 158, 11, 0.20), transparent 26%),
+        linear-gradient(135deg, var(--bg1), var(--bg2) 48%, var(--bg3));
+    line-height: 1.6;
+}
+
+.page {
+    width: min(940px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 40px 0 56px;
+}
+
+.hero {
+    padding: 34px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.95), rgba(236, 72, 153, 0.90));
+    color: white;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "✦";
+    position: absolute;
+    right: 30px;
+    top: 18px;
+    font-size: 86px;
+    color: rgba(255, 255, 255, 0.22);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    margin: 18px 0 8px;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.hero p {
+    margin: 0;
+    max-width: 680px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.90);
+}
+
+.card {
+    margin-top: 22px;
+    padding: 26px;
+    border-radius: 26px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 34px rgba(84, 49, 125, 0.10);
+    backdrop-filter: blur(14px);
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    margin: 22px 0 8px;
+    font-size: 19px;
+}
+
+p {
+    margin: 0 0 14px;
+}
+
+ul {
+    margin: 8px 0 0;
+    padding-left: 22px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+a {
+    color: var(--purple);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 18px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    color: white;
+    box-shadow: 0 10px 26px rgba(124, 58, 237, 0.22);
+    font-weight: 800;
+}
+
+.button.secondary {
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--text);
+    border: 1px solid rgba(124, 58, 237, 0.20);
+    box-shadow: none;
+}
+
+.notice {
+    padding: 16px 18px;
+    border-radius: 20px;
+    background: rgba(106, 167, 122, 0.14);
+    border: 1px solid rgba(106, 167, 122, 0.22);
+    color: #355a40;
+    font-weight: 650;
+}
+
+.footer {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+@media (max-width: 640px) {
+    .page {
+        width: min(100% - 22px, 940px);
+        padding: 22px 0 38px;
     }
 
-  </style>
+    .hero,
+    .card {
+        border-radius: 24px;
+        padding: 22px;
+    }
+}
+</style>
 </head>
 <body>
-  <main>
-    <section class="hero">
-      <div class="brand-row">
-        <div class="app-icon">📚</div>
-        <div>
-          <h1>Support</h1>
-          <p class="subtitle">FairyTales help center</p>
-        </div>
-      </div>
-      <p class="intro">Need help with FairyTales? Contact us and we’ll help you with account access, stories, downloads, audio, subscriptions, or app issues.</p>
-    </section>
+    <main class="page">
+        <section class="hero">
+            <span class="badge">✦ Fairytales App</span>
+            <h1>Support</h1>
+            <p>Need help with Fairytales? We are here to help with app access, stories, subscriptions, and privacy questions.</p>
+            <div class="nav">
+                <a class="button secondary" href="index.html">Home</a>
+                <a class="button secondary" href="privacy.html">Privacy Policy</a>
+            </div>
+        </section>
 
-    <section class="card">
-      <div class="badge warm">✉️ Contact Support</div>
-      <p>Email us at <a href="mailto:hello.fairytalesapp@gmail.com">hello.fairytalesapp@gmail.com</a>.</p>
-      <p class="muted">Please include your device model, iOS version, app version, and a short description of the problem. Screenshots are helpful if the issue is visual.</p>
-      <div class="button-row"><a class="button" href="mailto:hello.fairytalesapp@gmail.com?subject=FairyTales%20App%20Support">Email Support</a></div>
-    </section>
+        <section class="card">
+            <h2>Contact Support</h2>
+            <p>Email us at <a href="mailto:hello.fairytalesapp@gmail.com">hello.fairytalesapp@gmail.com</a>.</p>
+            <p>Please include a short description of the issue, your device model, iOS version, and any screenshots that may help us understand the problem.</p>
+        </section>
 
-    <section class="card"><h2>Common Help Topics</h2><ul><li><strong>Premium Access:</strong> Open your profile and use Restore Purchases if your subscription is not visible.</li><li><strong>Offline Stories:</strong> Make sure the story is fully downloaded before reading without internet.</li><li><strong>Audio Narration:</strong> Check your device volume, silent mode, and audio permissions if narration does not play.</li><li><strong>Story Personalization:</strong> If replacement names do not appear, reopen the story or try saving it again.</li></ul></section>
-    <section class="card"><h2>Privacy Policy</h2><p>You can read the public Privacy Policy here: <a href="privacy.html">Privacy Policy</a>.</p></section>
-    <footer>© 2026 FairyTales. All rights reserved.</footer>
-  </main>
+        <section class="card">
+            <h2>Free Stories</h2>
+            <p>Free stories can be used without creating an account or signing in. If free stories do not load, check your internet connection and try again.</p>
+        </section>
+
+        <section class="card">
+            <h2>Premium Access and Subscriptions</h2>
+            <p>Premium features may require Sign in with Apple and an active subscription. If you already subscribed, use “Restore Purchases” in the app to restore access.</p>
+            <p>Subscriptions are managed through your Apple ID. You can review or cancel subscriptions in your iPhone settings under your Apple ID subscription settings.</p>
+        </section>
+
+        <section class="card">
+            <h2>Sign in with Apple</h2>
+            <p>Sign in with Apple is used only when needed for premium features, subscriptions, or restoring purchases. Free stories remain available without signing in.</p>
+        </section>
+
+        <section class="card">
+            <h2>Privacy</h2>
+            <p>Read our Privacy Policy here: <a href="https://yavd.github.io/fairytales-legal/privacy.html">https://yavd.github.io/fairytales-legal/privacy.html</a>.</p>
+        </section>
+
+        <p class="footer">© 2026 Fairytales App. All rights reserved.</p>
+    </main>
 </body>
 </html>
