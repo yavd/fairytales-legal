@@ -1,1 +1,1 @@
-# fairytales-legal
+# Wishling-legal
